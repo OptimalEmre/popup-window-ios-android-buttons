@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        .popup-window {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+            width: 20rem;
+            height: 20rem;
+            padding: .5rem;
+            background-color:blanchedalmond;
+            box-shadow: 1px 1px 10px rgba(0,0,0,.2)
+        }
+
+        .popup-window--active {
+            display: block;
+        }
+
+        .button--close {
+            display: block;
+            margin-left: auto;
+            background-color: transparent;
+            border: 0;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .ios__button,
+        .android__button {
+            display: none;
+            width: 150px;
+            margin: 0 auto;
+        }
+
+        .ios__button > img,
+        .android__button > img {
+            width: 100%;
+        }
+
+        
+    </style>
+    <div id="download-popup" class="popup-window">
+        <button class="button--close" id="popup-close-button">&times;</button>
+        <a class="ios__button" id="ios-download-button" href=""><img src="apple-store.png" alt="Download on Apple Store"></a>
+        <a class="android__button" id="android-download-button"href=""><img src="google-play.png" alt="Download on Play Store"></a>
+    </div>
+
+  <script src="detect.js"></script>
+  <script src="script.js"></script>   
+</body>
+</html>
