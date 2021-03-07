@@ -26,7 +26,7 @@ function triggerPopup(divIdPrefix) {
 
 if (popupWindow) {
         popupCloseButton.addEventListener('click', () => {
-            popupWindowBackground.classList.add('popup-window--active');
+            popupWindowBackground.classList.remove('popup-window--active');
             popupWindow.classList.remove('popup-window--active');
         });
 }
